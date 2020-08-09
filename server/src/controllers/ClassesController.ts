@@ -25,7 +25,7 @@ export default class ClassesController {
 
         // para dizer que é do formato string
         const timeInMinutes = convertHourToMinutes(time);
-
+        // return response.json(timeInMinutes);
         const classes = await db('classes')
             .whereExists(function () {
                 this.select('class_schedule.*')
